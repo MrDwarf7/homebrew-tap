@@ -4,10 +4,10 @@ Personal Homebrew tap for macOS tools.
 
 ## Packages
 
-| Cask        | Description                                                          |
-| ----------- | -------------------------------------------------------------------- |
-| `tcut`      | Record terminal sessions and render to SVG, HTML, or text            |
-| `tcut-full` | Same `tcut` CLI, plus Homebrew's FFmpeg for MP4, GIF, WebM, and WebP |
+| Cask        | Description                                                       |
+| ----------- | ----------------------------------------------------------------- |
+| `tcut`      | Includes Homebrew's FFmpeg for MP4, GIF, WebM, and WebP rendering |
+| `tcut-lite` | Same `tcut` CLI, without an FFmpeg dependency                     |
 
 ## Install
 
@@ -16,9 +16,10 @@ brew install --cask mrdwarf7/tap/<cask>
 ```
 
 The [tcut](https://github.com/AmanVarshney01/tcut) casks use upstream binaries
-for Apple Silicon and Intel on macOS 13 or newer. Pick one: both install the
-`tcut` command. Uninstall it before switching variants, or add video rendering
-to an existing `tcut` installation with `brew install ffmpeg`.
+for Apple Silicon and Intel on macOS 13 or newer. Both install the `tcut`
+command. Uninstall the previous cask before switching, including `tcut-full`
+if you installed it under the old name. The lite cask can still use FFmpeg
+if it is already on your `PATH`.
 
 Run `brew update && brew upgrade` for updates.
 

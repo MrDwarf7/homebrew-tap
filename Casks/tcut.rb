@@ -12,7 +12,7 @@ cask "tcut" do
 
   url "https://github.com/AmanVarshney01/tcut/releases/download/v#{version}/tcut-#{version}-darwin-#{arch}"
   name "tcut"
-  desc "Record and render terminal sessions"
+  desc "Record and render terminal sessions with FFmpeg"
   homepage "https://github.com/AmanVarshney01/tcut"
 
   livecheck do
@@ -21,7 +21,8 @@ cask "tcut" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "tcut-full"
+  conflicts_with cask: "tcut-lite"
+  depends_on formula: "ffmpeg"
   depends_on macos: :ventura
   container type: :naked
 

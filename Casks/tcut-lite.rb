@@ -1,4 +1,4 @@
-cask "tcut-full" do
+cask "tcut-lite" do
   arch arm: "arm64", intel: "x64"
 
   version "1.4.7"
@@ -11,8 +11,8 @@ cask "tcut-full" do
   end
 
   url "https://github.com/AmanVarshney01/tcut/releases/download/v#{version}/tcut-#{version}-darwin-#{arch}"
-  name "tcut with FFmpeg"
-  desc "Record and render terminal sessions with FFmpeg"
+  name "tcut Lite"
+  desc "Record and render terminal sessions"
   homepage "https://github.com/AmanVarshney01/tcut"
 
   livecheck do
@@ -22,7 +22,6 @@ cask "tcut-full" do
   end
 
   conflicts_with cask: "tcut"
-  depends_on formula: "ffmpeg"
   depends_on macos: :ventura
   container type: :naked
 
